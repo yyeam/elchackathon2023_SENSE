@@ -11,9 +11,11 @@
   </head>
   <body>
     <a-scene> 
-      <a-camera position="0 0 0"></a-camera>
+      <!-- Camera -->
+      <a-camera position="0 0.6 0"></a-camera>
       <a-entity progressive-controls></a-entity>
-      
+
+      <!-- Scene and Lightning -->
        <a-entity id=”env” environment="preset: forest; groundColor: #608537; groundColor2: #798c53; groundTexture: walkernoise; dressingAmount:500; dressing: trees; dressingColor: #008000"></a-entity>
        <a-entity light="type: ambient; color: #BBB"></a-entity>
        <a-entity light="type: directional; color: #FFF; intensity: 0.2" position="-0.5 1 1"></a-entity>
@@ -23,8 +25,21 @@
               event-set__start="_event: grab-start; material.color: red" 
               event-set__end="_event: grab-end; material.color: #4CC3D9" 
               > </a-box> 
+
+      <!-- Assets Management System -->
+      <a-assets>
+        <a-asset-item id="tree" src="assets/tree/scene.gltf"></a-asset-item>
+      </a-assets>
+
+      <!-- Tree -->
+      <a-entity gltf-model="#tree" position="3 0 -3" scale="0.01 0.01 0.01"
+      clickable svisible="true"
+              event-set__start="_event: grab-start; material.color: red" 
+              event-set__end="_event: grab-end; material.color: #4CC3D9"
+      ></a-entity>
   
+
+
     </a-scene>
-      
   </body>
 </html>
