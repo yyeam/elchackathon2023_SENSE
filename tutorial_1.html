@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+</head>
+<body>
+    <a-scene>
+        <a-assets>
+            <img id="skyTexture" src="https://cdn.aframe.io/a-painter/images/sky.jpg" crossorigin="anonymous">
+        </a-assets>
+
+        <a-sky src="#skyTexture" theta-length="90" radius="30"></a-sky>
+
+        <a-camera>
+            <a-entity cursor="downEvents: triggerdown; upEvents: triggerUp"
+                      geometry="primitive: ring; radiusInner: 0.03; radiusOuter: 0.05"
+                      material="color: blue; shader: flat"
+                      position="0 0 -1">
+            </a-entity>
+        </a-camera>
+
+        <a-entity id="ground" 
+                geometry="primitive: cylinder; radius: 30; height: 0.1" 
+                position="0 0 0" 
+                material="shader: flat; color: #424949">
+        </a-entity>
+
+        
+    </a-scene>
+</body>
+</html>
