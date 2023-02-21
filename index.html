@@ -1,61 +1,65 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Virtual Garden</title>
-    
-    <script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
-    <script src="https://unpkg.com/aframe-environment-component@1.3.2/dist/aframe-environment-component.min.js"></script>
-    <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
-    <script src="https://unpkg.com/super-hands@2.1.0/dist/super-hands.min.js"></script>
-    
-  </head>
-  <body>
-    <!-- <audio controls autoplay>
-      <source src="https://youtu.be/Jm_TztNUBRQ.mp3" type="audio/mpeg">
-    </audio> -->
 
-    <a-scene> 
-      <!-- Camera -->
-      <a-entity id="rig" position="25 15 0">
-        <a-camera position="10 10 10"></a-camera>
-      </a-entity>
-      
-      <!-- Control -->
-      <a-entity progressive-controls></a-entity>
+<head>
+    <title>Jo Malone</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
 
-      <a-sky fog="0"> </a-sky>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">Fragrances</a></li>
+                <li><a href="#">Gifts</a></li>
+                <li><a href="#">Bath & Body</a></li>
+                <li><a href="#">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <h1>Introducing our new fragrance collection</h1>
+            <a href="#" class="btn">Shop now</a>
+        </section>
+        <section class="featured">
+            <h2>Featured products</h2>
+            <ul>
+                <li>
+                    <a href="#"><img src="product1.jpg" alt="Product 1"></a>
+                    <h3>Product 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">View</a>
+                </li>
+                <li>
+                    <a href="#"><img src="product2.jpg" alt="Product 2"></a>
+                    <h3>Product 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">View</a>
+                </li>
+                <li>
+                    <a href="#"><img src="product3.jpg" alt="Product 3"></a>
+                    <h3>Product 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="#" class="btn">View</a>
+                </li>
+            </ul>
+        </section>
+        <section class="newsletter">
+            <h2>Subscribe to our newsletter</h2>
+            <form>
+                <label for="email">Enter your email address:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 Jo Malone</p>
+    </footer>
+</body>
 
-      <!-- Assets Management System -->
-      <a-assets>
-        <a-asset-item id="tree" src="assets/trees/scene.gltf"></a-asset-item>
-        <a-asset-item id="river" src="assets/River/scene.gltf"></a-asset-item>
-        <a-asset-item id="waterlily" src="assets/Waterlily/scene.gltf"></a-asset-item>
-
-        <!-- <audio id="garden" src="daytime-garden.mp3" preload="auto"></audio> -->
-      </a-assets>
-
-      <!-- Scene and Lightning -->
-       <a-entity id=”env” environment="preset: forest; groundColor: #608537; groundColor2: #798c53; groundTexture: walkernoise; dressingAmount:500; dressing: mushroom; dressingColor: #008000"></a-entity>
-       <a-entity light="type: ambient; color: #BBB"></a-entity>
-       <a-entity light="type: directional; color: #FFF; intensity: 0.2" position="-0.5 1 1"></a-entity>
-      
-       <!-- Background Music -->
-       <!-- <a-entity sound="src: #garden; autoplay: true"></a-entity> -->
-      
-
-      <!-- Tree -->
-      <a-entity gltf-model="#tree" position="-3 0 -3" scale="0.005 0.005 0.005"></a-entity>
-
-
-      <!-- Waterlily -->
-      <a-entity gltf-model="#waterlily" position="10 0.5 -3" scale="0.05 0.05 0.05"
-      clickable visible="true" 
-      event-set__click="_event: click; scale: 0.05 0.05 0.05"
-      ></a-entity>
-      
-      <a-entity gltf-model="#river" position="10 0 10" scale="3 3 3"></a-entity>
-
-
-    </a-scene>
-  </body>
 </html>
