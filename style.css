@@ -24,32 +24,62 @@ h3 {
 
 /* Header styles */
 header {
-    background-color: #fff;
+    background-color: #fcf9ee;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
+
+@font-face {
+    font-family: "Lars Malone";
+    src: url("../test-ideal-vrgarden/Assets/LarsMalonePro-Bold.otf") format("opentype"),
+    url("../test-ideal-vrgarden/Assets/LarsMalonePro-BoldItalic.otf") format("opentype"),
+    url("../test-ideal-vrgarden/Assets/LarsMalonePro-Book.otf") format("opentype"),
+    url("../test-ideal-vrgarden/Assets/LarsMalonePro-BookItalic.otf") format("opentype"),
+    url("../test-ideal-vrgarden/Assets/LarsMalonePro-Medium.otf") format("opentype") ;
+    }
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem;
+    height:70px;
+
 }
 
 nav ul {
     display: flex;
     align-items: center;
+    padding-left: 30px;
 }
 
 nav ul li {
-    margin-left: 2rem;
+    margin-left: 1.5rem;
 }
 
 nav ul li:first-child {
     margin-left: 0;
 }
 
-nav a {
+nav a{
+    font-family: "Lars Malone Pro";    
+    font-size: 12px;
+    font-weight: 50;
+    letter-spacing: 2px;
+    margin-right: 25px;
+}
+
+nav a:hover {
     font-weight: bold;
+    text-decoration: underline;
+
+}
+
+.icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 38%;
+    margin-top:5px;
 }
 
 /* Banner styles */
@@ -166,3 +196,139 @@ footer {
     text-align: center;
     padding: 1rem;
 }
+
+.mySlides{
+    height: 100%;
+    width: 100%;
+}
+
+
+.chat-btn{
+    position: fixed;
+    right:50px;
+    bottom: 50px;
+    background: #fcf9ee;
+    color: white;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+}
+
+.chat-btn-img{
+    background-image: url(../test-ideal-vrgarden/Assets/chatIcon.png);
+}
+
+.chat-btn:hover, .submit:hover, #emoji-btn:hover{
+    opacity: 1;
+}
+
+.chat-popup{
+    display: none;
+    position: fixed;
+    bottom:80px;
+    right:120px;
+    height: 500px;
+    width: 300px;
+    background-color: #fcf9ee;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.75rem;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+.show{
+    display: flex;
+}
+
+.income-msg{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.out-msg{
+    display: flex;
+    padding-bottom: 0.5rem;
+    margin-left: 20px;
+
+}
+
+.out-msg:hover{
+    cursor: pointer;
+}
+
+.avatar{
+    width:45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.income-msg .msg{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 15px;
+    padding: 15px 20px;
+    padding-left: 25px;
+    width: 200px;
+    border: 1px solid #1c1c1c;
+    border-radius: 14px 14px 14px 0;
+    background: #fcf9ee;
+    font-size: 16px;
+    color: #1c1c1c;
+    font-family: "Malone Serif";
+    margin-bottom:10px;
+}
+
+.out-msg .msg{ 
+    display: flex;
+    align-items: center;
+    padding: 10px 35px 10px 20px;
+    min-width: 200px;
+    font: 12px/2 "Lars Malone",helvetica,arial,sans-serif;
+    color: #ffffff;
+    background: #1c1c1c;
+    border-radius: 14px 14px 0 14px;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+.out-msg .msg:hover{
+    background: #fcf9ee;
+    color: #1c1c1c;
+    border: 1px solid #1c1c1c;
+    padding: 10px 35px 10px 20px;
+    border-radius: 14px 14px 0 14px;
+}
+
+#startButton{
+    font-family: 'Lars Malone', 'helvetica', 'arial','sans-serif';
+    font-size: 14px;
+    padding: 0 24px;
+    margin-left: 100px;
+    margin-top:10px;
+    letter-spacing: .01em;
+    line-height: 42px;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    background: 0 0;
+    cursor: pointer;
+    color: #ffffff;
+    background: #1c1c1c;
+    transition: all .3s ease-in-out;
+}
+
+
+
+
+
+
+
