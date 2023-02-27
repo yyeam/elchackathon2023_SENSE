@@ -2,7 +2,8 @@
 <html>
 
 <head>
-    <title>Jo Malone</title>
+    <title>Home | Jo Malone London Official</title>
+    <link rel="icon" type="image/x-icon" href="../test-ideal-vrgarden/Assets/JML Trademark.jfif">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
@@ -25,20 +26,23 @@
         </nav>
     </header>
     <main>
-        
-        <img class="mySlides" src="../test-ideal-vrgarden/Assets/23B02_Landing-page_Hero_Desktop.jpg">
-        <img class="mySlides" src="../test-ideal-vrgarden/Assets/JML_FY23_Cologne-Intense_hero-1-DT-min.jpg">
+
+    <div class="container2">
+        <img class="mySlides" src="../test-ideal-vrgarden/Assets/23B02_Roses_1_Homepage_with-header_Desktop_1-L.jpg">
+        <div class="centered"><p>Celebrating The Rose</p></div>
+        <div class="centered2"><p style="border-bottom: 1.25px solid #000; font-weight:100; ">EXPLORE THE COLLECTION</p></div>
+    </div>
+
+        <img class="mySlides" src="../test-ideal-vrgarden/Assets/JML_FY23_Cologne-Intense_hero-1-DT-min.jpg"></img>
         
         <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
         <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
     
-        <script>
-            
-        </script>
+    
 
         
         <section class="featured">
-            <h2>Featured products</h2>
+            <h2 id="perfectPresent">The Perfect Present</h2>
             <ul>
                 <li>
                     <a href="#"><img src="product1.jpg" alt="Product 1"></a>
@@ -70,7 +74,7 @@
         </section>
 
         <section>
-            <button class="chat-btn"> 
+            <button hidden id="sfButton" class="chat-btn"> 
                 <img style="width: 50px; height: 50px; padding-right: 6px; padding-bottom: 3px;" src="../test-ideal-vrgarden/assets/JMavif.png"></img>
             </button>
     
@@ -117,7 +121,21 @@
                 </div>
             </div>
         </section>
+
+          <div hidden id="resultScents" class="card-container">
+            <div class="card">
+                <h3 class="scentTitle">English Pear & Fresia</h3>
+                <img class="scentImage" src="../test-ideal-vrgarden/assets/JMEnglishPear.webp">
+                <p class="scentDescription">The essence of autumn. The sensuous freshness of just-ripe pears is wrapped in a bouquet of white freesias, and mellowed by amber, patchouli and woods. Luscious and golden</p>
+                <button id="scentButton" onclick="location.href='IndividualProductPage.html'">Go To Scent</button>
+            </div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+          </div>
     </main>
+
+    
 
     <footer>
         <p>&copy; 2023 Jo Malone</p>

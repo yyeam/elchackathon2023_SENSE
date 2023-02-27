@@ -1,3 +1,12 @@
+window.addEventListener('scroll', function() {
+    if(window.scrollY > 230) {
+        document.getElementById("sfButton").hidden = false;
+    }
+    if(window.scrollY < 230) {
+        document.getElementById("sfButton").hidden = true;
+    }
+});
+
 var slideIndex = 1;
 showDivs(slideIndex);
 
@@ -15,6 +24,8 @@ function showDivs(n) {
     }
     x[slideIndex-1].style.display = "block";
 }
+
+
 
 const popup = document.querySelector('.chat-popup');
 const chatBtn = document.querySelector('.chat-btn');
@@ -131,6 +142,7 @@ function fourthSFQ(){
 }
 
 function fifthSFQ(){
-
+    document.getElementById("resultScents").hidden = false;
 
 }
+
