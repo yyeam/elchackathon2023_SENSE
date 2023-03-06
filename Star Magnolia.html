@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Virtual Garden</title>
+
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <script
+    src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
+  <script src="https://unpkg.com/aframe-event-set-component@3.0.3/dist/aframe-event-set-component.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@fb96ab2/dist/aframe-extras.min.js"></script>
+  <script src="https://github.com/aframevr/aframe/blob/master/src/components/look-controls.js"></script>
+  <!-- for mobile control -->
+  <script src="https://github.com/softvis-research/aframe-orbit-camera-component/blob/master/aframe-orbit-camera-component.js"></script>
+  <script src="https://rawgit.com/rdub80/aframe-gui/master/dist/aframe-gui.js"></script>
+  
+  <script>
+    AFRAME.registerComponent('play-pause', {
+      init: function () {
+        var myAudio = document.querySelector('#garden');
+        var audioControls = document.querySelector('#audioControls');
+        this.el.addEventListener('click', function () {
+          if (myAudio.paused) {
+            myAudio.play();
+            audioControls.setAttribute('src', '#pause');
+          } else {
+            myAudio.pause();
+            audioControls.setAttribute('src', '#play');
+          }
+        })
+      }
+    });
+
+    window.testButtonAction2 = function () {
+      console.log("clicked GUI");
+      var element = document.getElementById("instruction");
+      element.setAttribute('visible', false);
+    }
+  </script>
+ 
+</head>
+
+<body>
+  <a-scene cloudGarden>
+
+    <!-- Assets Management System -->
+    <a-assets>
+      <img id="sky" src="assets/sky 8.jpg">
+      <img id="sky_plane" src="assets/sky 7.jpg">
+
+      <audio id="garden" src="assets/cityParkAmbient_tuned.mp3" preload="auto" loop="true"></audio>
+
+      <!-- Star Magnolia Garden -->
+      <a-asset-item id="magnolia" src="assets/magnolia_white/scene.gltf"></a-asset-item>
+
+      <a-asset-item id="cloud" src="assets/cloud/scene.gltf"></a-asset-item>
+      <a-asset-item id="cloud_plane" src="assets/cloud_base_plane/scene.gltf"></a-asset-item>
+
+      <a-asset-item id="door" src="assets/door/scene.gltf" response-type="arraybuffer"></a-asset-item>
+      <a-asset-item id="table" src="assets/table/scene.gltf"></a-asset-item>
+      <a-asset-item id="jml" src="assets/jml/test4.glb"></a-asset-item>
+
+      <a-asset-item id="petal_rain" src="assets/petal_fall/scene.gltf" response-type="arraybuffer"></a-asset-item>
+    </a-assets>
+
+    <!-- Camera and Control-->
+    <a-entity position="0 0 -1.7" rotation="0 180 0">
+      <a-camera user-height="1.6" look-controls wasd-controls="acceleration: 30;">
+      </a-camera>
+    </a-entity>
+
+     <!-- Mouse cursor so we can click on the scene with mouse or touch. -->
+     <a-entity id="mouseCursor" cursor="rayOrigin: mouse" raycaster="objects: [gui-interactable]"></a-entity>
+
+
+    <!-- Instruction Menu -->
+    <a-entity>
+      <a-gui-flex-container id="instruction" flex-direction="column" justify-content="center" align-items="normal" component-padding="0.5" item-padding="0.5" opacity="0.95" width="9" height="5" panel-color="#F2F3F4" panel-rounded="0.1"
+      position="0 2.3 2.5" rotation="0 180 0" border-width="0.1">
+
+      <a-gui-input width="7.8" height="3" font-family="assets/fonts/LarsMalonePro-Book.otf" font-size="0.2" value="How to Play
+        PC: 
+        - Move: Use W, A, S, D key on keyboard
+        - Rotate: Mouse drag
+        - Click: Mouse click
+
+        Mobile devices: 
+        - Move: 
+        - Rotate:
+        - Click: " margin="0 0 0.05 0" background-color="#FFF" hover-color="#FFF">
+      </a-gui-input>
+
+      <a-gui-toggle id="audioControls" width="1.5" height="0.5" value="Sound" active-color="#4FC3F7" border-width="0.5"
+      play-pause
+        font-family="assets/fonts/PermanentMarker-Regular.ttf" 
+        font-size="0.25" line-height="0.8" letter-spacing="0"
+        margin="0 0 0.05 0" component-padding="0.2" background-color="#D6EAF8"
+       ></a-gui-toggle>
+
+      <a-gui-button width="1.5" height="0.5" value="OK" onclick="testButtonAction2"
+        font-family="assets/fonts/PermanentMarker-Regular.ttf" font-size="0.25" line-height="0.8" letter-spacing="0"
+        margin="0 0 0.05 0" component-padding="0.2" background-color="#D6EAF8" border-color="#D6EAF8" hover-color="#D6EAF8" font-color="#000">
+      </a-gui-button>
+      </a-gui-flex-container>
+    </a-entity>
+
+
+    <!-- Scene and Lightning -->
+    <a-sky src="#sky" radius="30"></a-sky>
+    <a-plane color="#50c5fa" height="40" width="40" rotation="-90 0 0"></a-plane>
+
+    <a-light type="ambient" color="#FFF" intensity="1.5"></a-light>
+    <a-light type="ambient" color="#ebd9e9" light=""></a-light>
+    <a-entity light="type: directional; color: #FFFFFF; intensity: 1;" position="0 5 -6"></a-entity>
+    <a-light type="directional" color="#FFF" intensity="0.65" position="" light=""></a-light>
+
+
+    <!-- Flower Petal rain -->
+    <a-entity gltf-model="#petal_rain" position="0 0.1 4.5" scale="2 2 2" animation-mixer="clip:Animation"></a-entity>
+
+    <!-- Star Magnolia Garden -->
+    <a-entity gltf-model="#door" position="0 1.9 5.3" rotation="0 0 0" scale="1.5 1.5 1.5"
+      animation-mixer="clip:doors_attics_open; loop: once; timeScale: 1; clampWhenFinished: true">
+    </a-entity>
+
+    <!-- Tree #1 -->
+    <a-entity gltf-model="#magnolia" position="5.6 -0.3 8" rotation="0 130 0" scale="1 1 1"></a-entity>
+    <a-entity gltf-model="#cloud" position="5.6 -1 8" scale="1 1 1" rotation="0 0 0"></a-entity>
+    <a-entity gltf-model="#cloud" position="5.6 -1 8" scale="1 1 1" rotation="0 0 0"></a-entity>
+
+    <!-- Tree #2 -->
+    <a-entity gltf-model="#magnolia" position="4.48 -0.3 10.644" rotation="0 -65 0" scale="1 1 1"></a-entity>
+    <a-entity gltf-model="#cloud" position="4.48 -1 10.644" scale="1 1 1" rotation="0 0 0"></a-entity>
+
+    <!-- Tree #3 -->
+    <a-entity gltf-model="#magnolia" position="2.899 -0.3 13.707" rotation="0 225 0"></a-entity>
+    <a-entity gltf-model="#cloud" position="2.899 -1 13.707" scale="1 1 1" rotation="0 0 0"></a-entity>
+
+    <!-- Centre -->
+    <a-entity gltf-model="#magnolia" position="0 -0.3 14.499" rotation="0 0 0" scale="1 1 1"></a-entity>
+    <a-entity gltf-model="#cloud" position="0 -1 14.499" scale="1 1 1" rotation="0 0 0"></a-entity>
+    <a-entity gltf-model="#cloud" position="0 -1 14.499" scale="1 1 1" rotation="0 0 0"></a-entity>
+
+    <!-- Tree #5 -->
+    <a-entity gltf-model="#magnolia" position="-2.899 -0.3 13.707" rotation="0 45 0" scale="1 1 1"></a-entity>
+    <a-entity gltf-model="#cloud" position="-2.899 -1 13.707" scale="1 1 1" rotation="0 0 0"></a-entity>
+
+    <!-- Tree #6 -->
+    <a-entity gltf-model="#magnolia" position="-4.48 -0.3 10.644" rotation="0 0 0" scale="1 1 1"></a-entity>
+    <a-entity gltf-model="#cloud" position="-4.48 -1 10.644" scale="1 1 1" rotation="0 0 0"></a-entity>
+    <a-entity gltf-model="#cloud" position="-4.48 -1 10.644" scale="1 1 1" rotation="0 0 0"></a-entity>
+
+    <!-- Tree #7 -->
+    <a-entity gltf-model="#magnolia" position="-5.6 -0.3 8" rotation="0 0 0" scale="1 1 1"></a-entity>
+    <a-entity gltf-model="#cloud" position="-5.6 -1 8" scale="1 1 1" rotation="0 0 0"></a-entity>
+
+    <!-- Table & Perfume -->
+    <a-entity gltf-model="#table" position="0 0 9" scale="0.015 0.015 0.015" rotation="0 180 0"></a-entity>
+    <a-entity gltf-model="#jml" position="0 1.143 9" scale="0.1 0.1 0.1" rotation="0 0 0"></a-entity>
+    <a-entity gltf-model="#cloud" position="0 -1 11" scale="1 1 1" rotation="0 0 0"></a-entity>
+
+  </a-scene>
+
+</body>
+
+</html>
