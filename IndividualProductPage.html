@@ -1,47 +1,103 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>English Pear &amp; Freesia Cologne</title>
+	<title>Star Magnolia Cologne | United Kingdom</title>
+	<link rel="icon" type="image/x-icon" href="../test-ideal-vrgarden/Assets/JML Trademark.jfif">
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- Link to the CSS file -->
 	<link rel="stylesheet" type="text/css" href="style2.css">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+<!-- A-Frame Import -->
+		<script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
 </head>
 <body>
 	<header>
-		<h1>Jomalone</h1>
-		<nav>
-			<ul>
-				<li><a href="#">Home</a></li>
-				<li><a href="#">Shop</a></li>
-				<li><a href="#">Fragrance Combining</a></li>
-				<li><a href="#">Gifts</a></li>
-				<li><a href="#">Our Story</a></li>
-			</ul>
-		</nav>
-	</header>
+        <nav class="container">
+            <ul class="topnav">
+                <li><a href="#">SHOP</a></li>
+                <li><a href="#">GIFTING</a></li>
+                <li><a href="#">STORES</a></li>
+                <li><a href="#">OUR  HOUSE</a></li>
+                <li class="icon"><img style="width:135px; height: 32px;" src="../test-ideal-vrgarden/assets/JM Icon.PNG" onclick="location.href='Index.html'"></img></li>
+                <li><img style="width:24px; height: 24px; margin-top:5px; margin-right: 5px;" src="../test-ideal-vrgarden/assets/searchIcon.PNG"></img></li>
+                <li><img style="width:23px; height: 28px; margin-right: 5px; margin-top: 5px;" src="../test-ideal-vrgarden/assets/loginIcon.PNG"></img></li>
+                <li><img style="width:20px; height: 25px; margin-right: 8px; margin-top: 5px;" src="../test-ideal-vrgarden/assets/wishListIcon.PNG"></img></li>
+                <li><img style="width:20px; height: 25px; margin-right: 38px; margin-top: 5px;" src="../test-ideal-vrgarden/assets/cartIcon.PNG"></img></li>
+            </ul>
+        </nav>
+    </header>
 	<main>
-		<section id="product-info">
-			<div id="product-image">
-				<img src="https://www.jomalone.com.my/media/catalog/product/cache/2/image/1600x1600/9df78eab33525d08d6e5fb8d27136e95/3/3/339/3390578508146.jpg" alt="English Pear &amp; Freesia Cologne">
+		<p id="naviCrumb">Home&nbsp / &nbspColognes</p>
+		<section class="row" id="product-info">
+			<div  class= "column" id="product-image">
+				<img style="height: 305px; width: 172px;" src="../test-ideal-vrgarden/Assets/30mlSMC.png" alt="Star Magnolia Cologone" >
+				<p id="shareLabel">Share</p>
 			</div>
-			<div id="product-details">
-				<h2>English Pear &amp; Freesia Cologne</h2>
-				<h3>100ml</h3>
-				<p>A British tradition. The scent of pear orchards in autumn, bottled.</p>
-				<div id="product-price">RM540.00</div>
-				<form>
-					<select>
-						<option>100ml</option>
-						<option>30ml</option>
-					</select>
-					<button type="submit">Add to bag</button>
-				</form>
+			
+			<div class="column" id="product-details">
+				<h3>LIMITED EDITION</h3>
+				<h2>Star Magnolia Cologne</h2>
+				<div id="product-price">RM540.00</div> <br><br>
+				<span id="review">5/5 &nbsp &nbsp <u>Read Reviews</u> </span> <br> <br>
+
+				<p id="productDescription" >Spring arrives with glistening blossom trees scenting the air in the city parks of Shanghai: star magnolia is in bloom. Their crisp, pristine petals are <u id="readMore" onclick="readMore()"><b style="font-weight:bolder; cursor: pointer;"> Read More</b></u> <span hidden id="extra">gleaming against emerald magnolia leaf and a soft creamy sandalwood base.</span> <u hidden id="readLess" onclick="readLess()"><b style="font-weight:bolder; cursor: pointer;"> Read Less</b></u>  </p>
+				<br>
+
+				<img style="height: 37px; width: 21px; margin-left:2px; margin-top:3px; margin-right:50px; " src="../test-ideal-vrgarden/Assets/30mlSMC.png" alt="Star Magnolia Cologone" >
+				<img style="height: 42px; width: 27px;" src="../test-ideal-vrgarden/Assets/Star Magnolia.png" alt="Star Magnolia Cologone" >
+				
+
+				<p class="productQuantity" style="font-size: 10px; margin-top:17px; "><span style="border-bottom: 1px solid #000; padding-bottom: 3.5px;">50ml</span> &nbsp &nbsp &nbsp &nbsp <span style="margin-left:17px;">100ml</span> </p>
+				
+				<button id="addToBag">Add To Bag</button>
+
+				<img class="payMethod" src="https://static.afterpay.com/icon/clearpay-logo-black-transparent.svg" alt="Clearpay"> <br>
+				<span class="payMethodDescription">4 fortnightly payments of RM110. <u>Learn More</u></span>
+
+				<img class="payMethod" style="margin-top:0px; height:11px; width:89%;" src="https://www.jomalone.co.uk/media/export/cms/checkout/klarna_black.svg" alt="Clearpay"> <br>
+				<span class="payMethodDescription"> 3 interest-free payments of RM145. <u>Learn More</u></span>
+
+				<div id="wishList">
+				<img style="width:20px; height:20px;" src="../test-ideal-vrgarden/Assets/wishlistSvg.svg" alt="Clearpay">
+				<span style="font-family: 'Lars Malone',helvetica,arial,sans-serif; font-size: 12px;">Wishlist</span>
+				<div id="wlHover"> 
+					<h2 style="text-align:center; font-weight: 900; padding-bottom:0.25rem; padding-top:0.25rem; font-size:28px;">Wishlist</h2>
+					<ul id="list">
+						<li><img  id="bulletIcon" src="Assets/flowerIcon.png">Muffin</li>
+						<li><img  id="bulletIcon" src="Assets/flowerIcon.png">Fruitcake</li>    
+						<li><img  id="bulletIcon" src="Assets/flowerIcon.png">Biscuit</li>
+						</ul>
+				</div>	
+			</div>
+
 			</div>
 		</section>
+
+		<h2 hidden id="vreTitle">Sense The Scent</h2>
+		
+		<section > 
+			<img id="fullScreenIcon" onclick="fullScreen()" src="Assets/fullScreenIcon.png"></img>
+			<iframe id="aFrame" src="../test-ideal-vrgarden/dummy scene.html" width="711px" height="400px" style="border:1px solid black; margin-left:300px;">
+				
+			</iframe>
+			
+		</section>
+		
+	
+		<!-- <div id="aframe-container">
+				<a-scene>
+				  <a-box position="-1 0.5 -3" rotation="0 45 0" color="#4CC3D9"></a-box>
+				  <a-camera position="0 1.6 0"></a-camera>
+				</a-scene>
+		</div> -->
+
 	</main>
-	<footer>
-		<p>&copy; 2023 Jomalone</p>
-	</footer>
+	    <footer>
+        &copy; 2023 Jo Malone
+    </footer>
+		
+	<script src="script.js"></script>
 </body>
 </html>

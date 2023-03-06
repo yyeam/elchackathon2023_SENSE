@@ -1,9 +1,11 @@
 window.addEventListener('scroll', function() {
     if(window.scrollY > 230) {
         document.getElementById("sfButton").hidden = false;
+        document.getElementById("scentFinder").hidden = false;
     }
     if(window.scrollY < 230) {
         document.getElementById("sfButton").hidden = true;
+        document.getElementById("scentFinder").hidden = true;
     }
 });
 
@@ -76,8 +78,17 @@ function start(){
     document.getElementById("in-msg-div").hidden = false;
     document.getElementById("out-msg-div1").hidden = false;
     document.getElementById("out-msg-div2").hidden = false;
+
+    document.getElementById("out-msg1").innerHTML = "For you";
+    document.getElementById("out-msg2").innerHTML = "For someone else";
+
+    document.getElementById("out-msg1").onclick = firstSFQ ;
+    document.getElementById("out-msg2").onclick = firstSFQ ;
     
-    
+    document.getElementById("in-msg").innerHTML = "You are choosing...";
+
+
+
 }
 
 function firstSFQ(){ 
@@ -146,3 +157,72 @@ function fifthSFQ(){
 
 }
 
+function exitButton(){
+    document.getElementById("resultScents").hidden = true;
+
+    document.getElementById("in-msg-div").hidden =  true;
+    document.getElementById("out-msg-div1").hidden = true;
+    document.getElementById("out-msg-div2").hidden = true;
+    document.getElementById("out-msg-div3").hidden = true;
+    document.getElementById("out-msg-div4").hidden = true;
+    document.getElementById("out-msg-div5").hidden = true;
+
+
+    document.getElementById("birdBox").hidden = false;
+    document.getElementById("initialText").hidden = false;
+    document.getElementById("startButton").style.display = 'inline';
+    document.getElementById("startButton").onclick = start ;
+}
+
+function readMore(){
+    document.getElementById("extra").hidden = false;
+    document.getElementById("readMore").hidden = true;
+    document.getElementById("readLess").hidden = false;
+
+}
+
+function readLess(){
+    document.getElementById("extra").hidden = true;
+    document.getElementById("readMore").hidden = false;
+    document.getElementById("readLess").hidden = true;
+}
+
+function fullScreen(){
+
+
+    document.getElementById("aFrame").height = "610px;";
+    document.getElementById("aFrame").width = "100%";
+    document.getElementById("aFrame").scrollIntoView();
+    
+    document.getElementById("fullScreenIcon").src = "Assets/minimizeIcon.png"
+    document.getElementById("fullScreenIcon").onclick = windowScreen ;
+    document.getElementById("fullScreenIcon").style = "top:1380px; right:-295px;"
+
+    disableScroll();
+}
+
+function windowScreen(){
+    document.getElementById("aFrame").height = "400px;";
+    document.getElementById("aFrame").width = "711px"
+    
+    document.getElementById("fullScreenIcon").onclick = fullScreen ;
+    document.getElementById("fullScreenIcon").src = "Assets/fullScreenIcon.png"
+    document.getElementById("fullScreenIcon").style = "top:1175px;" 
+    
+    enableScroll();
+}
+
+function disableScroll() {
+    // Get the current page scroll position
+    scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    scrollLeft = window.pageXOffset || document.documentElement.scrollLeft,
+
+        // if any scroll is attempted, set this to the previous value
+        window.onscroll = function() {
+            window.scrollTo(scrollLeft, scrollTop);
+        };
+}
+
+function enableScroll() {
+    window.onscroll = function() {};
+}

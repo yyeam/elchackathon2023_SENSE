@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-icons/3.0.1/iconfont/material-icons.min.css">
+
+
+
 </head>
 
 <body>
@@ -19,14 +22,16 @@
                 <li><a href="#">GIFTING</a></li>
                 <li><a href="#">STORES</a></li>
                 <li><a href="#">OUR  HOUSE</a></li>
-                <li class="icon"><img style="width:135px; height: 32px;" src="../test-ideal-vrgarden/assets/JM Icon.PNG"></img></li>
-                <li><img style="width:24px; height: 24px; margin-top:5px;" src="../test-ideal-vrgarden/assets/searchIcon.PNG"></img></li>
-                <li><img style="width:20px; height: 25px; margin-right: 35px; margin-top: 5px;" src="../test-ideal-vrgarden/assets/cartIcon.PNG"></img></li>
+                <li class="icon"><img style="width:135px; height: 32px;" src="../test-ideal-vrgarden/assets/JM Icon.PNG" onclick="location.href='Index.html'"></img></li>
+                <li><img style="width:24px; height: 24px; margin-top:5px; margin-right: 5px;" src="../test-ideal-vrgarden/assets/searchIcon.PNG"></img></li>
+                <li><img style="width:23px; height: 28px; margin-right: 5px; margin-top: 5px;" src="../test-ideal-vrgarden/assets/loginIcon.PNG"></img></li>
+                <li><img style="width:20px; height: 25px; margin-right: 8px; margin-top: 5px;" src="../test-ideal-vrgarden/assets/wishListIcon.PNG"></img></li>
+                <li><img style="width:20px; height: 25px; margin-right: 38px; margin-top: 5px;" src="../test-ideal-vrgarden/assets/cartIcon.PNG"></img></li>
             </ul>
         </nav>
     </header>
+    
     <main>
-
     <div class="container2">
         <img class="mySlides" src="../test-ideal-vrgarden/Assets/23B02_Roses_1_Homepage_with-header_Desktop_1-L.jpg">
         <div class="centered"><p>Celebrating The Rose</p></div>
@@ -41,26 +46,26 @@
     
 
         
-        <section class="featured">
+        <section class="featured" style="background-color: #fcf9ee;">
             <h2 id="perfectPresent">The Perfect Present</h2>
             <ul>
                 <li>
-                    <a href="#"><img src="product1.jpg" alt="Product 1"></a>
-                    <h3>Product 1</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#" class="btn">View</a>
+                    <a><img src="../test-ideal-vrgarden/Assets/JMEnglishPear.webp" alt="Product 1"></a>
+                    <h3 class="productHeader">English Pear & Freesia Cologne</h3>
+                    <p>RM635.00  100ml &nbsp<img class="arrow" src="../test-ideal-vrgarden/assets/arrowSVG.svg"></p>
+                    <a class="btn">Quick Shop</a>
                 </li>
                 <li>
-                    <a href="#"><img src="product2.jpg" alt="Product 2"></a>
-                    <h3>Product 2</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#" class="btn">View</a>
+                    <a><img src="../test-ideal-vrgarden/Assets/Scarlet Poppy.png" alt="Product 2"></a>
+                    <h3 class="productHeader">Scarlet Poppy Cologne Intense</h3>
+                    <p>RM890.00  100ml &nbsp<img class="arrow" src="../test-ideal-vrgarden/assets/arrowSVG.svg"></p>
+                    <a class="btn">Quick Shop</a>
                 </li>
                 <li>
-                    <a href="#"><img src="product3.jpg" alt="Product 3"></a>
-                    <h3>Product 3</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    <a href="#" class="btn">View</a>
+                    <a><img src="../test-ideal-vrgarden/Assets/Pomegranate Noir.png" alt="Product 3"></a>
+                    <h3 class="productHeader">Pomegranate Noir Cologne</h3>
+                    <p>RM635.00  100ml &nbsp<img class="arrow" src="../test-ideal-vrgarden/assets/arrowSVG.svg"></p>
+                    <a class="btn">Quick Shop</a>
                 </li>
             </ul>
         </section>
@@ -78,10 +83,10 @@
                 <img style="width: 50px; height: 50px; padding-right: 6px; padding-bottom: 3px;" src="../test-ideal-vrgarden/assets/JMavif.png"></img>
             </button>
     
-            <div class="chat-popup" alt="Scent Finder">
+            <div id="scentFinder" class="chat-popup" alt="Scent Finder">
                 <div class="chat-area">
 
-                <h3 style="font-family:'Lars Malone'; margin-left: 55px; margin-bottom:20px; "> Scent Finder </h2>
+                <h3 style="font-family:'Malone Serif SemiBold'; text-align: center; margin-bottom:20px; ">Scent Finder</h2>
 
                  <img id="birdBox" style="width:175px; height:175px; margin-left:40px; margin-top:10px;" src="../test-ideal-vrgarden/assets/birdBottle.svg">
 
@@ -124,14 +129,31 @@
 
           <div hidden id="resultScents" class="card-container">
             <div class="card">
-                <h3 class="scentTitle">English Pear & Fresia</h3>
-                <img class="scentImage" src="../test-ideal-vrgarden/assets/JMEnglishPear.webp">
-                <p class="scentDescription">The essence of autumn. The sensuous freshness of just-ripe pears is wrapped in a bouquet of white freesias, and mellowed by amber, patchouli and woods. Luscious and golden</p>
+                <h3 class="scentTitle">Star Magnolia</h3>
+                <img class="scentImage" style="width:142px; height: 228px; margin-top: 18px; margin-left:48px;" src="../test-ideal-vrgarden/assets/Star Magnolia.png">
+                <p class="scentDescription" style="margin-top:20px;">Spring arrives with glistening blossom trees scenting the air in the city parks of Shanghai: star magnolia is in bloom. Their crisp, pristine petals are gleaming against emerald magnolia leaf and a soft creamy sandalwood base.</p>
                 <button id="scentButton" onclick="location.href='IndividualProductPage.html'">Go To Scent</button>
             </div>
-            <div class="card">Card 2</div>
-            <div class="card">Card 3</div>
-            <div class="card">Card 4</div>
+            <div class="card">
+                <h3 class="scentTitle">English Pear & Freesia</h3>
+                <img class="scentImage" src="../test-ideal-vrgarden/assets/JMEnglishPear.webp">
+                <p class="scentDescription">The essence of autumn. The sensuous freshness of just-ripe pears is wrapped in a bouquet of white freesias, and mellowed by amber, patchouli and woods. Luscious and golden.</p>
+                <button id="scentButton">Go To Scent</button>
+            </div>
+            <div class="card">
+                <h3 class="scentTitle">Scarlet Poppy</h3>
+                <img class="scentImage" src="../test-ideal-vrgarden/assets/Scarlet Poppy.png">
+                <p class="scentDescription" >The wild steppes of southwest Asia covered in the extravagant blooms of the great scarlet poppy. Their opulence enhanced with velvety iris and the sweet.</p>
+                <button id="scentButton">Go To Scent</button>
+            </div>
+            <div class="card">
+                <h3 class="scentTitle">Pomegranate Noir</h3>
+                <img class="scentImage" src="../test-ideal-vrgarden/assets/Pomegranate Noir.png">
+                <p class="scentDescription" >Daring sensuality, encapsulated in scent. Ruby-rich juices of pomegranate, laced with Casablanca lily. Warmed by smoky guaiacwood and patchouli.</p>
+                <button id="scentButton">Go To Scent</button>
+            </div>
+
+            <img src="../test-ideal-vrgarden/assets/exitIcon.png" style="top:0px; right:0px; height:24px; width:24px;" onclick="exitButton()">
           </div>
     </main>
 
