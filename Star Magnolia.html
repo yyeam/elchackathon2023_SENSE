@@ -32,7 +32,7 @@
     });
 
     window.testButtonAction2 = function () {
-      console.log("clicked GUI");
+      // console.log("clicked GUI");
       var element = document.getElementById("instruction");
       element.setAttribute('visible', false);
     }
@@ -65,7 +65,7 @@
 
     <!-- Camera and Control-->
     <a-entity position="0 0 -1.7" rotation="0 180 0">
-      <a-camera user-height="1.6" look-controls wasd-controls="acceleration: 30;">
+      <a-camera user-height="1.6" look-controls wasd-controls="acceleration: 20">
       </a-camera>
     </a-entity>
 
@@ -106,7 +106,7 @@
 
 
     <!-- Scene and Lightning -->
-    <a-sky src="#sky" radius="30"></a-sky>
+    <a-sky src="#sky" radius="50"></a-sky>
     <a-plane color="#50c5fa" height="40" width="40" rotation="-90 0 0"></a-plane>
 
     <a-light type="ambient" color="#FFF" intensity="1.5"></a-light>
