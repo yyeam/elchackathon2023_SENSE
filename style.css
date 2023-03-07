@@ -1,0 +1,507 @@
+/* Global styles */
+html {
+    -webkit-font-smoothing: antialiased ;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+}
+
+/* Header styles */
+header {
+    background-color: #fcf9ee;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+@font-face {
+    font-family: "Lars Malone";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../test-ideal-vrgarden/Assets/LarsMalonePro-Regular.woff2") format('woff2');
+    }
+
+@font-face {
+    font-family: "Lars Malone Bold";
+    font-weight: 700;
+    font-style: normal;
+    src: url("../test-ideal-vrgarden/Assets/LarsMalonePro-Bold.woff2") format('woff2');
+    }
+
+@font-face {
+    font-family: "Malone Serif";
+    font-weight: 400;
+    font-style: normal;
+    src: url("../test-ideal-vrgarden/Assets/MaloneSerif-Regular.woff2") format('woff2');
+    }
+
+@font-face {
+    font-family: "Malone Serif SemiBold";
+    font-weight: 600;
+    font-style: normal;
+    src: url("../test-ideal-vrgarden/Assets/MaloneSerif-SemiBold.woff2") format('woff2');
+    }
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    height:70px;
+
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+
+nav ul li {
+    margin-left: 1.5rem;
+}
+
+nav ul li:first-child {
+    margin-left: 0;
+}
+
+nav a{
+    font-family: "Lars Malone Pro";    
+    font-size: 12px;
+    font-weight: 50;
+    letter-spacing: 2px;
+    margin-right: 25px;
+}
+
+nav a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+
+}
+
+.icon{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 28%;
+    margin-top:5px;
+}
+
+.icon:hover{
+    cursor: pointer;
+}
+
+/* Banner styles */
+.banner {
+    background-image: url(banner.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+    padding: 5rem;
+}
+
+.banner h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.banner .btn {
+    background-color: #fff;
+    color: #333;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+/* Featured products styles */
+.featured {
+    background-color: #f9f9f9;
+    padding: 2.5rem;
+}
+
+.featured h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.featured ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.featured li {
+    width: 30%;
+    margin-bottom: 2rem;
+}
+
+.featured img {
+    max-width: 100%;
+}
+
+.featured h3 {
+    font-size: 1rem;
+}
+
+.featured p {
+    padding: 0;
+    justify-content: center;
+    font-size: 14px;
+    letter-spacing: 0;
+    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    text-align: center;
+    font-weight: 400;
+    margin: 0 auto;
+    color: #1c1c1c;
+    margin-bottom:20px;
+    margin-top:17px;
+    margin-left:2px;
+    
+}
+
+.featured .btn {
+    background: 0 0;
+    font-size: 14px;
+    letter-spacing: 0;
+    line-height: 20px;
+    color: #1c1c1c;
+    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    text-align: center;
+    border: 1px solid #e2e1d7;
+    width: 128px;
+    border-radius: unset;
+    height: 40px;
+    overflow: hidden;
+    display: block;
+    margin-left:115px;
+    padding-top:10px;
+}
+
+.featured .btn:hover{
+    cursor: pointer;
+}
+
+/* Newsletter styles */
+.newsletter {
+    background-color: #fff;
+    padding: 5rem;
+    text-align: center;
+}
+
+.newsletter h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.newsletter form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.newsletter label {
+    margin-right: 1rem;
+}
+
+.newsletter input[type="email"] {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 2rem;
+}
+
+.newsletter button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 2rem;
+    font-weight: bold;
+}
+
+.mySlides{
+    height: 100%;
+    width: 100%;
+}
+
+.chat-btn{
+    position: fixed;
+    right:50px;
+    bottom: 50px;
+    background: #fcf9ee;
+    color: white;
+    width:60px;
+    height: 60px;
+    border-radius: 50%;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+    box-shadow: 0 5px 5px rgba(0,0,0,0.4);
+}
+
+.chat-btn-img{
+    background-image: url(../test-ideal-vrgarden/Assets/chatIcon.png);
+}
+
+.chat-btn:hover, .submit:hover, #emoji-btn:hover{
+    opacity: 1;
+}
+
+
+.chat-popup{
+    display: none;
+    position: fixed;
+    bottom:80px;
+    right:120px;
+    height: 500px;
+    width: 300px;
+    background-color: #fcf9ee;
+    /* display: flex; */
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0.75rem;
+    box-shadow: 5px 5px 5px 5px rgba(0,0,0,0.4);
+    border-radius: 10px;
+}
+
+.show{
+    display: flex;
+}
+
+.income-msg{
+    display: flex;
+    align-items: center;
+    padding-bottom: 1rem;
+}
+
+.out-msg{
+    display: flex;
+    padding-bottom: 0.5rem;
+    margin-left: 20px;
+
+}
+
+.out-msg:hover{
+    cursor: pointer;
+}
+
+.avatar{
+    width:45px;
+    height: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.income-msg .msg{
+    display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 15px;
+    padding: 15px 20px;
+    padding-left: 25px;
+    width: 200px;
+    border: 1px solid #1c1c1c;
+    border-radius: 14px 14px 14px 0;
+    background: #fcf9ee;
+    font-size: 16px;
+    color: #1c1c1c;
+    font-family: "Malone Serif";
+    margin-bottom:10px;
+}
+
+.out-msg .msg{ 
+    display: flex;
+    align-items: center;
+    padding: 10px 35px 10px 20px;
+    min-width: 200px;
+    font: 12px/2 "Lars Malone",helvetica,arial,sans-serif;
+    color: #ffffff;
+    background: #1c1c1c;
+    border-radius: 14px 14px 0 14px;
+    justify-content: flex-start;
+    margin-bottom: 5px;
+}
+
+.out-msg .msg:hover{
+    background: #fcf9ee;
+    color: #1c1c1c;
+    border: 1px solid #1c1c1c;
+    padding: 10px 35px 10px 20px;
+    border-radius: 14px 14px 0 14px;
+}
+
+#startButton{
+    font-family: 'Lars Malone', 'helvetica', 'arial','sans-serif';
+    font-size: 14px;
+    padding: 0 24px;
+    margin-left: 100px;
+    margin-top:20px;
+    letter-spacing: .01em;
+    line-height: 42px;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    background: 0 0;
+    cursor: pointer;
+    color: #ffffff;
+    background: #1c1c1c;
+    transition: all .3s ease-in-out;
+}
+
+#perfectPresent{
+    font-size: 32px;
+    font-family: "Malone Serif",times,"Times New Roman",serif;
+    letter-spacing: .01em;
+    line-height: 1.33333;
+    font-weight:lighter;
+}
+
+.container2 {
+    position: relative;
+    text-align: center;
+    color: white;
+  }
+
+.centered {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Malone Serif",times,"Times New Roman",serif;
+    font-size: 2rem;
+    color: black;
+    font-weight:lighter;
+    letter-spacing: .04em;
+    line-height: 1.73333;
+    font-weight: 100;
+    
+}
+
+.centered2{
+    position: absolute;
+    top: 22%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+    color: black;
+    font-weight:lighter;
+    letter-spacing: .01em;
+    line-height: 1.33333;
+    font-weight: 100;
+    font-size: 12px;
+    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    letter-spacing: .17em;
+    line-height: 1.5;
+    text-transform: uppercase;  
+}
+
+  .card {
+    background-color: #fcf9ee;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #cccccc;
+    margin: 10px;
+    padding: 20px;
+    padding-top:5px;
+    height:588px;
+    width:300px;
+  }
+  
+
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+
+    position:fixed;
+    padding:0;
+    margin:0;
+
+    top:0;
+    left:0;
+
+    width: 100%;
+    height: 100%;
+    background:rgba(255,255,255,0.5);
+  } 
+
+  .scentTitle{
+    text-align: center;
+    font-family: "Malone Serif SemiBold";
+    padding-left: 1px;
+    padding-right:1px;
+  }
+
+  .scentImage{
+    width:250px; 
+    height:250px; 
+  }
+
+  .scentDescription{
+    margin-top:15px;
+    text-align:center;
+    font-family:'Lars Malone';
+    font-weight:100;
+  }
+  
+  #scentButton{
+    font-family: 'Lars Malone', 'helvetica', 'arial','sans-serif';
+    position:absolute;
+    font-size: 14px;
+    padding: 0 24px;
+    margin-left: 65px;
+    bottom:30px;
+    letter-spacing: .01em;
+    line-height: 42px;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    text-decoration: none;
+    background: 0 0;
+    cursor: pointer;
+    color: #ffffff;
+    background: #1c1c1c;
+    transition: all .3s ease-in-out;
+  }
+
+.productHeader{
+    font-family:'Lars Malone';
+    font-weight: 400;
+    text-align:center ;
+    font-size: 44px;
+}
+
+.arrow{
+    height:15px;
+    width:15px;
+    transform: rotate(90deg);
+}
+
+/* Footer styles */
+footer {
+    background-color: #f9f9f9;
+    text-align: center;
+    padding: 1rem;
+    margin-left:50px;
+}
