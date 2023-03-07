@@ -294,7 +294,7 @@ clear: both;
     position:absolute;
      width:50px; 
      height:50px; 
-     top: 1175px;
+     top: 1275px;
     right: 252px;
 }
 
@@ -313,7 +313,7 @@ clear: both;
     right:200px;
     height: 200px;
     width: 250px;
-    background-color: #707070;
+    background-color: #424242;
     flex-direction: column;
     justify-content: space-between;
     padding: 0.75rem;
@@ -326,8 +326,6 @@ clear: both;
     font-size: 18px;
     font-family: "Lars Malone",helvetica,arial,sans-serif;
     font-weight: 600;
-    
-
 }
 
 li{
@@ -352,7 +350,6 @@ li:hover #bulletIcon{
     margin-right: 5px;
 }
 
-
 .rotate {
     animation: rotation 2s infinite linear;
   }
@@ -366,12 +363,14 @@ li:hover #bulletIcon{
     }
   }
 
-  #vreTitle{
+#vreTitle{
     font-size: 32px;
     font-family: "Malone Serif",times,"Times New Roman",serif;
     letter-spacing: .01em;
     line-height: 1.33333;
-    font-weight:lighter;
+    font-weight: lighter;
+    padding-bottom: 2.5rem;
+    text-align:center;
 }
 
 /* Footer styles */

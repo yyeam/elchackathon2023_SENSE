@@ -196,7 +196,7 @@ function fullScreen(){
     
     document.getElementById("fullScreenIcon").src = "Assets/minimizeIcon.png"
     document.getElementById("fullScreenIcon").onclick = windowScreen ;
-    document.getElementById("fullScreenIcon").style = "top:1380px; right:-295px;"
+    document.getElementById("fullScreenIcon").style = "top:1480px; right:-295px;"
 
     disableScroll();
 }
@@ -207,7 +207,7 @@ function windowScreen(){
     
     document.getElementById("fullScreenIcon").onclick = fullScreen ;
     document.getElementById("fullScreenIcon").src = "Assets/fullScreenIcon.png"
-    document.getElementById("fullScreenIcon").style = "top:1175px;" 
+    document.getElementById("fullScreenIcon").style = "top:1275px;" 
     
     enableScroll();
 }
