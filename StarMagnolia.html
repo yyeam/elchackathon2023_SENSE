@@ -3,7 +3,7 @@
 
 <head>
   <title>Virtual Garden</title>
-
+	<link rel="stylesheet" href="style.css">
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <script
     src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
@@ -45,22 +45,22 @@
 
     <!-- Assets Management System -->
     <a-assets>
-      <img id="sky" src="assets/sky 8.jpg">
-      <img id="sky_plane" src="assets/sky 7.jpg">
+      <img id="sky" src="Assets/sky 8.jpg">
+      <img id="sky_plane" src="Assets/sky 7.jpg">
 
-      <audio id="garden" src="assets/cityParkAmbient_tuned.mp3" preload="auto" loop="true"></audio>
+      <audio id="garden" src="Assets/cityParkAmbient_tuned.mp3" preload="auto" loop="true"></audio>
 
       <!-- Star Magnolia Garden -->
-      <a-asset-item id="magnolia" src="assets/magnolia_white/scene.gltf"></a-asset-item>
+      <a-asset-item id="magnolia" src="Assets/magnolia_white/scene.gltf"></a-asset-item>
 
-      <a-asset-item id="cloud" src="assets/cloud/scene.gltf"></a-asset-item>
-      <a-asset-item id="cloud_plane" src="assets/cloud_base_plane/scene.gltf"></a-asset-item>
+      <a-asset-item id="cloud" src="Assets/cloud/scene.gltf"></a-asset-item>
+      <a-asset-item id="cloud_plane" src="Assets/cloud_base_plane/scene.gltf"></a-asset-item>
 
-      <a-asset-item id="door" src="assets/door/scene.gltf" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="table" src="assets/table/scene.gltf"></a-asset-item>
-      <a-asset-item id="jml" src="assets/jml/test4.glb"></a-asset-item>
+      <a-asset-item id="door" src="Assets/door/scene.gltf" response-type="arraybuffer"></a-asset-item>
+      <a-asset-item id="table" src="Assets/table/scene.gltf"></a-asset-item>
+      <a-asset-item id="jml" src="Assets/jml/Perfume_whLabel.glb"></a-asset-item>
 
-      <a-asset-item id="petal_rain" src="assets/petal_fall/scene.gltf" response-type="arraybuffer"></a-asset-item>
+      <a-asset-item id="petal_rain" src="Assets/petal_fall/scene.gltf" response-type="arraybuffer"></a-asset-item>
     </a-assets>
 
     <!-- Camera and Control-->
@@ -78,27 +78,23 @@
       <a-gui-flex-container id="instruction" flex-direction="column" justify-content="center" align-items="normal" component-padding="0.5" item-padding="0.5" opacity="0.95" width="9" height="5" panel-color="#F2F3F4" panel-rounded="0.1"
       position="0 2.3 2.5" rotation="0 180 0" border-width="0.1">
 
-      <a-gui-input width="7.8" height="3" font-family="assets/fonts/LarsMalonePro-Book.otf" font-size="0.2" value="How to Play
+      <a-gui-input width="7.8" height="3" font-family="Lars Malone Pro" font-size="0.2" letter-spacing= "1.5px" line-height="1.5" value="How to Play
         PC: 
         - Move: Use W, A, S, D key on keyboard
         - Rotate: Mouse drag
-        - Click: Mouse click
-
-        Mobile devices: 
-        - Move: 
-        - Rotate:
-        - Click: " margin="0 0 0.05 0" background-color="#FFF" hover-color="#FFF">
+        - Click: Mouse click " 
+        margin="0 0 0.05 0" background-color="#FFF" hover-color="#FFF">
       </a-gui-input>
 
       <a-gui-toggle id="audioControls" width="1.5" height="0.5" value="Sound" active-color="#4FC3F7" border-width="0.5"
       play-pause
-        font-family="assets/fonts/PermanentMarker-Regular.ttf" 
+        font-family="Lars Malone " 
         font-size="0.25" line-height="0.8" letter-spacing="0"
         margin="0 0 0.05 0" component-padding="0.2" background-color="#D6EAF8"
        ></a-gui-toggle>
 
       <a-gui-button width="1.5" height="0.5" value="OK" onclick="testButtonAction2"
-        font-family="assets/fonts/PermanentMarker-Regular.ttf" font-size="0.25" line-height="0.8" letter-spacing="0"
+        font-family="Malone Serif SemiBold" font-size="0.2" line-height="0.8" letter-spacing="0"
         margin="0 0 0.05 0" component-padding="0.2" background-color="#D6EAF8" border-color="#D6EAF8" hover-color="#D6EAF8" font-color="#000">
       </a-gui-button>
       </a-gui-flex-container>

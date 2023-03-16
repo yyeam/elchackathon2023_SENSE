@@ -35,31 +35,31 @@ header {
 }
 
 @font-face {
-    font-family: "Lars Malone";
+    font-family: "Lars Malone Pro";
     font-weight: 400;
     font-style: normal;
-    src: url("../test-ideal-vrgarden/Assets/LarsMalonePro-Regular.woff2") format('woff2');
+    src: url("Assets/LarsMalonePro-Regular.woff2") format('woff2');
     }
 
 @font-face {
     font-family: "Lars Malone Bold";
     font-weight: 700;
     font-style: normal;
-    src: url("../test-ideal-vrgarden/Assets/LarsMalonePro-Bold.woff2") format('woff2');
+    src: url("Assets/LarsMalonePro-Bold.woff2") format('woff2');
     }
 
 @font-face {
     font-family: "Malone Serif";
     font-weight: 400;
     font-style: normal;
-    src: url("../test-ideal-vrgarden/Assets/MaloneSerif-Regular.woff2") format('woff2');
+    src: url("Assets/MaloneSerif-Regular.woff2") format('woff2');
     }
 
 @font-face {
     font-family: "Malone Serif SemiBold";
     font-weight: 600;
     font-style: normal;
-    src: url("../test-ideal-vrgarden/Assets/MaloneSerif-SemiBold.woff2") format('woff2');
+    src: url("Assets/MaloneSerif-SemiBold.woff2") format('woff2');
     }
 
 nav {
@@ -86,7 +86,6 @@ nav ul li:first-child {
 }
 
 nav a{
-    font-family: "Lars Malone Pro";    
     font-size: 12px;
     font-weight: 50;
     letter-spacing: 2px;
@@ -96,7 +95,10 @@ nav a{
 nav a:hover {
     font-weight: bold;
     text-decoration: underline;
+}
 
+#navText{
+	font-family: "Lars Malone Pro"; 
 }
 
 .icon{
@@ -148,7 +150,7 @@ nav a:hover {
 }
 
 #product-details h3 {
-	font-family: "Lars Malone",helvetica,arial,sans-serif;
+	font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
     position:absolute;
     font-size: 12px;
     font-weight: 600;
@@ -160,7 +162,7 @@ nav a:hover {
 #product-details p {
 	font-size: 16px;
 	margin-bottom: 20px;
-    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
     font-size: 12px;
     letter-spacing: .04em;
     line-height: 2.0;
@@ -174,7 +176,7 @@ nav a:hover {
     font-size: 12px;
     line-height: 1;
     font-weight: 600;
-    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
     padding-top:10px;
 }
 
@@ -200,7 +202,7 @@ clear: both;
 #naviCrumb{
     background-color: #fcf9ee;
     margin:0;
-    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
     font-size: 12px;
     letter-spacing: .04em;
     line-height: 1.6;
@@ -216,7 +218,7 @@ clear: both;
 #review{
     padding-left: 190px;
     color: #1c1c1c;
-    font: 600 normal 12px/1 "Lars Malone",helvetica,arial,sans-serif;
+    font: 600 normal 12px/1 "Lars Malone Pro",helvetica,arial,sans-serif;
     margin: 0;
     letter-spacing: 0.5px;
     cursor: pointer;
@@ -234,11 +236,11 @@ clear: both;
     padding: 0 0 6px;
     transition: all .3s ease-in-out;
     width: fit-content;
-    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
 }
 
 #addToBag{
-    font-family: 'Lars Malone', 'helvetica', 'arial','sans-serif';
+    font-family: 'Lars Malone Pro', 'helvetica', 'arial','sans-serif';
     position: relative;
     font-size: 12px;
     font-weight:500;
@@ -267,7 +269,7 @@ clear: both;
 .payMethodDescription{
     letter-spacing: 0.4px;
     line-height: 1.42857;
-    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
     font-size: 13px;
     line-height: 24px;
     color: #1c1c1c;
@@ -280,7 +282,7 @@ clear: both;
     font-size: 12px;
     text-decoration: underline;
     cursor: default;
-    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
     line-height: 24px;
     color: #1c1c1c;
 }
@@ -324,7 +326,7 @@ clear: both;
 #list{
     color: #fcf9ee;
     font-size: 18px;
-    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
     font-weight: 600;
 }
 

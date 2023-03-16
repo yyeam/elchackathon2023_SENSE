@@ -1,6 +1,7 @@
 /* Global styles */
 html {
     -webkit-font-smoothing: antialiased ;
+	
 }
 
 body {
@@ -33,31 +34,31 @@ header {
 }
 
 @font-face {
-    font-family: "Lars Malone";
+    font-family: "Lars Malone Pro";
     font-weight: 400;
     font-style: normal;
-    src: url("../test-ideal-vrgarden/Assets/LarsMalonePro-Regular.woff2") format('woff2');
+    src: url("Assets/LarsMalonePro-Regular.woff2") format('woff2');
     }
 
 @font-face {
     font-family: "Lars Malone Bold";
     font-weight: 700;
     font-style: normal;
-    src: url("../test-ideal-vrgarden/Assets/LarsMalonePro-Bold.woff2") format('woff2');
+    src: url("Assets/LarsMalonePro-Bold.woff2") format('woff2');
     }
 
 @font-face {
     font-family: "Malone Serif";
     font-weight: 400;
     font-style: normal;
-    src: url("../test-ideal-vrgarden/Assets/MaloneSerif-Regular.woff2") format('woff2');
+    src: url("Assets/MaloneSerif-Regular.woff2") format('woff2');
     }
 
 @font-face {
     font-family: "Malone Serif SemiBold";
     font-weight: 600;
     font-style: normal;
-    src: url("../test-ideal-vrgarden/Assets/MaloneSerif-SemiBold.woff2") format('woff2');
+    src: url("Assets/MaloneSerif-SemiBold.woff2") format('woff2');
     }
 
 nav {
@@ -83,8 +84,7 @@ nav ul li:first-child {
     margin-left: 0;
 }
 
-nav a{
-    font-family: "Lars Malone Pro";    
+nav a{  
     font-size: 12px;
     font-weight: 50;
     letter-spacing: 2px;
@@ -95,6 +95,12 @@ nav a:hover {
     font-weight: bold;
     text-decoration: underline;
 
+}
+
+#navText{
+	  font-family: "Lars Malone Pro";  
+	  line-height: 1.5;
+	  font-weight: 100;
 }
 
 .icon{
@@ -169,7 +175,7 @@ nav a:hover {
     justify-content: center;
     font-size: 14px;
     letter-spacing: 0;
-    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
     text-align: center;
     font-weight: 400;
     margin: 0 auto;
@@ -186,7 +192,7 @@ nav a:hover {
     letter-spacing: 0;
     line-height: 20px;
     color: #1c1c1c;
-    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
     text-align: center;
     border: 1px solid #e2e1d7;
     width: 128px;
@@ -265,6 +271,7 @@ nav a:hover {
 
 .chat-btn:hover, .submit:hover, #emoji-btn:hover{
     opacity: 1;
+	cursor: pointer;
 }
 
 
@@ -334,7 +341,7 @@ nav a:hover {
     align-items: center;
     padding: 10px 35px 10px 20px;
     min-width: 200px;
-    font: 12px/2 "Lars Malone",helvetica,arial,sans-serif;
+    font: 12px/2 "Lars Malone Pro",helvetica,arial,sans-serif;
     color: #ffffff;
     background: #1c1c1c;
     border-radius: 14px 14px 0 14px;
@@ -351,7 +358,7 @@ nav a:hover {
 }
 
 #startButton{
-    font-family: 'Lars Malone', 'helvetica', 'arial','sans-serif';
+    font-family: 'Lars Malone Pro', 'helvetica', 'arial','sans-serif';
     font-size: 14px;
     padding: 0 24px;
     margin-left: 100px;
@@ -410,7 +417,7 @@ nav a:hover {
     line-height: 1.33333;
     font-weight: 100;
     font-size: 12px;
-    font-family: "Lars Malone",helvetica,arial,sans-serif;
+    font-family: "Lars Malone Pro",helvetica,arial,sans-serif;
     letter-spacing: .17em;
     line-height: 1.5;
     text-transform: uppercase;  
@@ -461,12 +468,12 @@ nav a:hover {
   .scentDescription{
     margin-top:15px;
     text-align:center;
-    font-family:'Lars Malone';
+    font-family:'Lars Malone Pro';
     font-weight:100;
   }
   
   #scentButton{
-    font-family: 'Lars Malone', 'helvetica', 'arial','sans-serif';
+    font-family: 'Lars Malone Pro', 'helvetica', 'arial','sans-serif';
     position:absolute;
     font-size: 14px;
     padding: 0 24px;
@@ -486,7 +493,7 @@ nav a:hover {
   }
 
 .productHeader{
-    font-family:'Lars Malone';
+    font-family:'Lars Malone Pro';
     font-weight: 400;
     text-align:center ;
     font-size: 44px;
@@ -497,6 +504,30 @@ nav a:hover {
     width:15px;
     transform: rotate(90deg);
 }
+
+#scentFinderTextArea{
+    position: fixed;
+    right:120px;
+    bottom: 80px;
+}
+
+#scentFinderText{
+	 display: flex;
+    align-items: center;
+    margin: 0;
+    margin-left: 15px;
+    padding: 15px 20px;
+    padding-left: 25px;
+    width: 200px;
+    border: 1px solid #1c1c1c;
+    border-radius: 14px 14px 0 14px;
+    background: #fcf9ee;
+    font-size: 16px;
+    color: #1c1c1c;
+    font-family: "Malone Serif";
+    margin-bottom:10px;
+}
+
 
 /* Footer styles */
 footer {

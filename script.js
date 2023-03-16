@@ -1,11 +1,34 @@
+try{
+	  function checkMobile() {
+         if ((navigator.userAgent.match(/Android/i)
+         || navigator.userAgent.match(/webOS/i)
+         || navigator.userAgent.match(/iPhone/i)
+         || navigator.userAgent.match(/iPad/i)
+         || navigator.userAgent.match(/iPod/i)
+         || navigator.userAgent.match(/BlackBerry/i)
+         || navigator.userAgent.match(/Windows Phone/i))) {
+            window.location.href = "error.html";
+         } else if(screen.width < screen.height){
+			 window.location.href = "error.html";
+		 	}
+		 } 
+ 
+	  window.onload = checkMobile;
+
 window.addEventListener('scroll', function() {
-    if(window.scrollY > 230) {
+    if(window.scrollY > 275) {
         document.getElementById("sfButton").hidden = false;
         document.getElementById("scentFinder").hidden = false;
+		document.getElementById("scentFinderTextArea").hidden = false;
+		document.getElementById("scentFinderText").hidden = false;
+		
     }
-    if(window.scrollY < 230) {
+    if(window.scrollY < 275) {
         document.getElementById("sfButton").hidden = true;
         document.getElementById("scentFinder").hidden = true;
+		document.getElementById("scentFinderTextArea").hidden = true;
+		document.getElementById("scentFinderText").hidden = true;
+		
     }
 });
 
@@ -14,6 +37,14 @@ showDivs(slideIndex);
 
 function plusDivs(n) {
     showDivs(slideIndex += n);
+	if(slideIndex > 1){
+		document.getElementById("roseText").hidden = true;
+		document.getElementById("exploreText").hidden = true;
+	}
+	else if(slideIndex == 1){
+		document.getElementById("roseText").hidden = false;
+		document.getElementById("exploreText").hidden = false;
+	}
 }
 
 function showDivs(n) {
@@ -26,8 +57,6 @@ function showDivs(n) {
     }
     x[slideIndex-1].style.display = "block";
 }
-
-
 
 const popup = document.querySelector('.chat-popup');
 const chatBtn = document.querySelector('.chat-btn');
@@ -44,30 +73,12 @@ window.addEventListener('DOMContentLoaded', () => {
     picker.on('emoji', emoji => {
       document.querySelector('input').value += emoji;
     });
-  
-    emojiBtn.addEventListener('click', () => {
-      picker.togglePicker(emojiBtn);
-    });
   });        
 
 //   chat button toggler 
 
 chatBtn.addEventListener('click', ()=>{
     popup.classList.toggle('show');
-})
-
-// send msg 
-submitBtn.addEventListener('click', ()=>{
-    let userInput = inputElm.value;
-
-    let temp = `<div class="out-msg">
-    <span class="my-msg">${userInput}</span>
-    <img src="img/me.jpg" class="avatar">
-    </div>`;
-
-    chatArea.insertAdjacentHTML("beforeend", temp);
-    inputElm.value = '';
-
 })
 
 function start(){
@@ -186,4 +197,8 @@ function readLess(){
     document.getElementById("readMore").hidden = false;
     document.getElementById("readLess").hidden = true;
 }
+}catch(err){
+	
+}
+
 
