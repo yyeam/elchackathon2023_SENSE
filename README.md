@@ -20,4 +20,17 @@ Since this is only a POC and the main highlight is really the highlight, we didn
 
 Once your display settings are configured, Please maximize your browser window and WE CAN BEGIN! Here is the ideal user journey we've mapped out for our customers;
 
-1) 
+1) Land on Joe Malone's Home page by launching your live server or just clicking on Index.html within your file explorer (Make sure all assets are attached).
+2) Scroll down to the "Perfect Presents" section, once you've scrolled down, you should see a pop-up on the bottom right of your display labelled "Scent Finder".
+3) This is the first new techincal feature we're implementing on top of JM's current website. Click on the Scent Finder pop-up and take the quiz.
+4) At the end of the quiz you should be presented with 4 scent options, for our MVP (Minimum Viable Product) we've built our VR garden only for Star Magnolia as it's part of Joe Malone's new Blossoms Collection. 
+5) Proceed to click on the "Go To Scent" button, this will redirect you to Star Magnolia's Individual Product Page.
+6) Continue by scrolling down to the "Experience The Scent" section of the webpage, this is where you will find our VR expereince, this is our second technical feature.
+7) Firstly, click on the "VR" button available on the bottom right of the VR window display to full screen your VR window.
+
+![image](https://user-images.githubusercontent.com/122961328/225568418-fff4dcf9-e167-435f-974f-4aefe734eb0d.png)
+
+8) Once full-screened, you are shown some basic "How To Play" Instructions and you can also choose to toggle the sound on/off using the provided slider. 
+9) Once this is all done, it's time to finally dive into our VR experience. Click "OK" and BEGIN! 
+10) Fool around and have fun in our Virtual Garden :) 
+11) Once you're done messing about in our virtual reality, it's time to add this product to your wishlist which is our final feature.
