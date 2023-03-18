@@ -1,6 +1,8 @@
 PROJECT TITLE: SENSE
 
-PROJECT DESCRIPTION: To answer the question of beauty accessibility, we've chosen to target the An Our code is nothing but 2 webpages that are built using HTML, CSS & JS. What's new is our VR Garden, this uses a lightweight web framework called A-Frame that helps us build 3D & VR experiences on the web. A few reasons as to why we chose A-Frame over an established graphical engine like Unity or Unreal Engine are as follows;
+PROJECT DESCRIPTION: To answer the question of beauty accessibility, we've chosen to target the Anosmic community (individuals who have lost their sense of smell), since these individuals can't smell, we've chosen to use a 3D graphics/VR design tool that can help these individuals get a better sense of a scent/fragrance using audio-visual queues (not to mention the fact that all digital customers looking for fragrances are technically anosmic since none of us can smell virtually).
+
+Our project consists of 2 simple webpages that are built using HTML, CSS & JS, 2hat's new is our VR Garden, this implements a lightweight web framework called A-Frame that helps us build 3D & VR experiences on the web. A few reasons as to why we chose A-Frame over an established graphical engine like Unity or Unreal Engine to build our Virtual Reality experience are as follows;
 
   1) It's based upon HTML which makes it compatible with any generic website, which means that it doesn't really matter what tools your vendor has used to build your respective brand's website (may it be Joe Malone, Tom Ford or even Le Labo), we can still intergrate this VR experience amongst all of them with no issues at all.
   
@@ -32,5 +34,18 @@ Once your display settings are configured, Please maximize your browser window a
 
 8) Once full-screened, you are shown some basic "How To Play" Instructions and you can also choose to toggle the sound on/off using the provided slider. 
 9) Once this is all done, it's time to finally dive into our VR experience. Click "OK" and BEGIN! 
-10) Fool around and have fun in our Virtual Garden :) 
-11) Once you're done messing about in our virtual reality, it's time to add this product to your wishlist which is our final feature.
+11) Fool around and have fun in our Virtual Garden :) 
+12) Once you're done messing about in our virtual reality, it's time to add this product to your "Wishlist", which is our final feature.
+13) The wishlist functionality is currently just a POC but if you hover over it, you can see the 3 options provided, namely;
+    a) Request A Tester
+    b) Connect To A Stylist
+    c) Connect To A Community
+These 3 options prompt immediate conversion within the user by providing them a more high-touch and personalized feel.
+13) This concludes our User Journey, in which we've highlighted our 3 newly implemented technical features.
+
+CONTRIBUTORS: Nikhil Chaturvedi (nichatur@estee.com)
+              Yong Xuan (yyeam@estee.com)
+          
+REFERENCES: https://aframe.io/
+
+         
