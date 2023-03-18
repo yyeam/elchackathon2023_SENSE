@@ -2,7 +2,7 @@ PROJECT TITLE: SENSE
 
 PROJECT DESCRIPTION: To answer the question of beauty accessibility, we've chosen to target the Anosmic community (individuals who have lost their sense of smell), since these individuals can't smell, we've chosen to use a 3D graphics/VR design tool that can help these individuals get a better sense of a scent/fragrance using audio-visual queues (not to mention the fact that all digital customers looking for fragrances are technically anosmic since none of us can smell virtually).
 
-Our project consists of 2 simple webpages that are built using HTML, CSS & JS, 2hat's new is our VR Garden, this implements a lightweight web framework called A-Frame that helps us build 3D & VR experiences on the web. A few reasons as to why we chose A-Frame over an established graphical engine like Unity or Unreal Engine to build our Virtual Reality experience are as follows;
+Our project consists of 2 simple webpages that are built using HTML, CSS & JS, what's new is our VR Garden, this implements a lightweight graphical web framework called A-Frame that helps us build 3D & VR experiences on the web. A few reasons as to why we chose A-Frame over an established graphical engine like Unity or Unreal Engine to build our Virtual Reality experience are as follows;
 
   1) It's based upon HTML which makes it compatible with any generic website, which means that it doesn't really matter what tools your vendor has used to build your respective brand's website (may it be Joe Malone, Tom Ford or even Le Labo), we can still intergrate this VR experience amongst all of them with no issues at all.
   
